@@ -9,8 +9,8 @@ class NoteItems extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(top: 24, bottom: 24),
       decoration: BoxDecoration(
-        color: Colors.orangeAccent,
-        //color:Colors.primaries[Random().nextInt(Colors.primaries.length)],
+        //color: Colors.orangeAccent,
+        color:Colors.primaries[Random().nextInt(Colors.primaries.length)],
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -46,7 +46,7 @@ class NoteItems extends StatelessWidget {
           Padding(
             padding:const  EdgeInsets.only(right: 24),
             child: Text(
-              'November9 , 2002',
+              'November 11 , 2022',
               style: TextStyle(
                 color: Colors.black.withOpacity(0.4),
                 fontSize: 14,
