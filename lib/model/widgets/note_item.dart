@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 class NoteItems extends StatelessWidget {
@@ -8,14 +9,15 @@ class NoteItems extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(top: 24, bottom: 24),
       decoration: BoxDecoration(
-        color:Colors.blue,
+        color: Colors.orangeAccent,
+        //color:Colors.primaries[Random().nextInt(Colors.primaries.length)],
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
-        children:const [
+        children:[
           ListTile(
-              title:Text(
+              title: const Text(
                 'Flutter Tips',
                 style:TextStyle(
                   color: Colors.black,
@@ -23,27 +25,30 @@ class NoteItems extends StatelessWidget {
                 ),
               ),
               subtitle: Padding(
-                padding: EdgeInsets.only(top: 16),
+                padding:const EdgeInsets.symmetric(vertical: 16),
                 child: Text(
                   'Take a note....',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.black.withOpacity(0.4),
                     fontSize: 18,
                   ),
                 ),
               ),
-              trailing:Icon(
-                Icons.delete,
-                color: Colors.black,
-                size: 24,
-              )
+            trailing: IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.delete,
+                  color: Colors.black,
+                  size: 24,
+              ),
+          ),
           ),
           Padding(
-            padding: EdgeInsets.only(right: 24),
+            padding:const  EdgeInsets.only(right: 24),
             child: Text(
               'November9 , 2002',
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.black.withOpacity(0.4),
                 fontSize: 14,
               ),
             ),
